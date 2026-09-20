@@ -1,0 +1,12 @@
+.container {
+  width: min(100% - (var(--page-padding) * 2), var(--container-width));
+  margin-inline: auto;
+}
+.section {
+  padding-block: clamp(4rem, 8vw, 8rem);
+}
+@media (max-width: 768px) {
+  .section {
+    padding-block: 4rem;
+  }
+}

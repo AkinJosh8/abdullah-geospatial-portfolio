@@ -1,0 +1,49 @@
+:root {
+  /* for brand colors */
+  --color-primary: #008080;
+  --color-primary-light: #00a896;
+  --color-primary-dark: #075e54;
+
+  /* for light Theme */
+  --color-bg: #f8f9fa;
+  --color-surface: #ffffff;
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  --color-border: #dbe3e8;
+
+  /* for effects */
+  --color-overlay: rgba(15, 23, 42, 0.45);
+
+  /* typography */
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* the layout */
+  --container-width: 1440px;
+  --page-padding: clamp(1.25rem, 4vw, 4rem);
+
+  /* radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* motion */
+  --transition-fast: 180ms ease;
+  --transition-base: 300ms ease;
+  --transition-slow: 500ms ease;
+}
+
+[data-theme="dark"] {
+  --color-primary: #00d2c4;
+  --color-primary-light: #00e5ff;
+  --color-primary-dark: #00a896;
+
+  --color-bg: #0f172a;
+  --color-surface: #111c30;
+  --color-text: #f8fafc;
+  --color-text-muted: #94a3b8;
+  --color-border: #263449;
+
+  --color-overlay: rgba(2, 6, 23, 0.7);
+}
