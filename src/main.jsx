@@ -3,6 +3,9 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./styles/globals.css";
 import "./styles/responsive.css";
+import "./styles/hero.css"
+import "./styles/header.css"
+import "./styles/regional-map.css"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

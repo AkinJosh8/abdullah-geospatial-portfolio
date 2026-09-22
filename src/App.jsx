@@ -1,9 +1,29 @@
+import { useTheme } from "./hooks/useTheme";
+import Header from "./components/Header";
+import SideMenu from "./components/SideMenu";
+import { useState } from "react";
+import Hero from "./components/Hero";
+import RegionalMap from "./components/RegionalMap";
+
+
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { theme, toggleTheme } = useTheme()
+
   return (
-    <main>
-      <h1>Abdullah AbdaZeez Ayomide</h1>
-      <p>Geospatial Planner | GIS & Remote Sensing Analyst</p>
-    </main>
+    <>
+      <Header onMenuOpen={() => setIsMenuOpen(true)} />
+
+      <SideMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}
+        theme={theme} onThemeToggle={toggleTheme}
+        />
+
+      <main>
+        <Hero />
+
+        <RegionalMap />
+      </main>
+    </>
   );
 }
 

@@ -1,34 +1,27 @@
 :root {
-  /* for brand colors */
   --color-primary: #008080;
   --color-primary-light: #00a896;
   --color-primary-dark: #075e54;
 
-  /* for light Theme */
   --color-bg: #f8f9fa;
   --color-surface: #ffffff;
   --color-text: #0f172a;
   --color-text-muted: #475569;
   --color-border: #dbe3e8;
 
-  /* for effects */
   --color-overlay: rgba(15, 23, 42, 0.45);
 
-  /* typography */
   --font-sans: "Inter", sans-serif;
   --font-display: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  /* the layout */
-  --container-width: 1440px;
-  --page-padding: clamp(1.25rem, 4vw, 4rem);
+  --container-width: 100%;
+  --page-padding: clamp(0.65rem, 1vw, 1rem);
 
-  /* radius */
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 20px;
 
-  /* motion */
   --transition-fast: 180ms ease;
   --transition-base: 300ms ease;
   --transition-slow: 500ms ease;
@@ -46,4 +39,20 @@
   --color-border: #263449;
 
   --color-overlay: rgba(2, 6, 23, 0.7);
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 0.75rem;
+  }
+  .header-inner {
+    min-height: 50px;
+    padding: 0.65rem 0.8rem;
+  }
+  .brand-text {
+    font-size: 0.65rem;
+  }
+  .menu-trigger {
+    font-size: 0.65rem;
+  }
 }
