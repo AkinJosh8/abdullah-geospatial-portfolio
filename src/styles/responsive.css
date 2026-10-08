@@ -109,57 +109,64 @@
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
-
   .regional-map-layout {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-
   .regional-map-title {
-    font-size: clamp(2rem, 9vw, 3rem);
+    font-size: clamp(2.2rem, 10vw, 3.5rem);
   }
-
   .regional-map-status {
     margin-top: 1.5rem;
   }
-
   .regional-map-visual {
-    min-height: 400px;
+    min-height: 520px;
   }
-
+  .regional-map-content {
+    top: 8%;
+    left: 7%;
+    width: 86%;
+    transform: none;
+  }
+  .map-label {
+    font-size: 0.42rem;
+  }
   .map-mali {
-    top: 18%;
+    top: 48%;
     left: 25%;
   }
-
   .map-niger {
-    top: 24%;
+    top: 51%;
     left: 45%;
   }
-
   .map-chad {
-    top: 29%;
-    left: 65%;
+    top: 56%;
+    left: 67%;
   }
-
   .map-cameroon {
-    top: 57%;
+    top: 70%;
     left: 70%;
   }
-
+  .map-nigeria {
+    top: 65%;
+    left: 53%;
+  }
+  .map-coordinate {
+    right: 1rem;
+    bottom: 1rem;
+    font-size: 0.42rem;
+  }
   .map-country-highlight {
-    top: 57%;
-    left: 55%;
+    top: 67%;
+    left: 52%;
+  }
   }
 
   @keyframes scanMap {
     0% {
       transform: translateY(0);
     }
-
     100% {
-      transform: translateY(400px);
+      transform: translateY(520px);
     }
   }
-
-}

@@ -1,0 +1,232 @@
+.about-section {
+  padding-top: 5rem;
+  padding-bottom: 7rem;
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(3rem, 7vw, 8rem);
+  align-items: start;
+  margin-inline: 1rem;
+}
+.about-intro {
+  position: sticky;
+  top: 7rem;
+}
+.about-label {
+  margin-bottom: 1.25rem;
+  color: var(--color-primary);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+}
+.about-title {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5vw, 5.5rem);
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+}
+.about-focus {
+  margin-top: 2rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+}
+.about-image {
+  width: 100%;
+  max-width: 420px;
+  margin-top: 2.5rem;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+.about-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  filter: grayscale(15%);
+  transition: transform var(--transition-base);
+}
+
+.about-image:hover img {
+  transform: scale(1.02);
+}
+.about-content {
+  max-width: 760px;
+}
+
+.about-copy {
+  border-top: 1px solid var(--color-border);
+}
+
+.about-copy p {
+  padding: 1.5rem 0;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  line-height: 1.55;
+  letter-spacing: -0.015em;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-capabilities {
+  margin-top: 3rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.about-capabilities-label {
+  padding: 1rem 0;
+  color: var(--color-primary-light);
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-capability-group {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 1.5rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-group-label {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.08em;
+}
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.about-tags span {
+  padding: 0.45rem 0.6rem;
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-mono);
+  font-size: 0.48rem;
+  letter-spacing: 0.04em;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast),
+    background-color var(--transition-fast);
+}
+
+.about-tags span:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background: color-mix(
+    in srgb,
+    var(--color-primary) 5%,
+    transparent
+  );
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about-section {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+  .about-grid {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    gap: 3rem;
+  }
+  .about-intro {
+    position: static;
+  }
+  .about-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+  }
+  .about-focus {
+    margin-top: 1.5rem;
+    font-size: 0.48rem;
+  }
+  .about-image {
+    max-width: 340px;
+    margin-top: 2rem;
+  }
+  .about-copy p {
+    padding: 1.25rem 0;
+    font-size: 1rem;
+  }
+  .about-capabilities {
+    margin-top: 2.5rem;
+  }
+  .about-capability-group {
+    grid-template-columns: 105px 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    margin-inline: 0.5rem;
+  }
+  .about-intro {
+    position: static;
+  }
+  .about-label {
+    margin-bottom: 1rem;
+    font-size: 0.55rem;
+  }
+  .about-title {
+    font-size: clamp(2.5rem, 11vw, 3.8rem);
+    line-height: 0.92;
+  }
+  .about-focus {
+    margin-top: 1.25rem;
+    font-size: 0.46rem;
+  }
+ .about-image {
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+  .about-content {
+    max-width: none;
+  }
+  .about-copy p {
+    padding: 1.15rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .about-capabilities {
+    margin-top: 2rem;
+  }
+  .about-capabilities-label {
+    padding: 0.85rem 0;
+    font-size: 0.52rem;
+  }
+  .about-capability-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem 0;
+  }
+  .about-group-label {
+    font-size: 0.46rem;
+  }
+  .about-tags {
+    gap: 0.4rem;
+  }
+  .about-tags span {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.42rem;
+  }
+}
