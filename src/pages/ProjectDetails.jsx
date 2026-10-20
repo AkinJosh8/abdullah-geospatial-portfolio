@@ -14,7 +14,7 @@ function ProjectDetails() {
         <div className="container">
           <h1>Project not found.</h1>
 
-          <Link to="/projects">
+          <Link to="/">
             &#8592; Back to projects
           </Link>
         </div>
@@ -26,7 +26,7 @@ function ProjectDetails() {
     <main className="project-details">
       <section className="project-details-hero section">
         <div className="container">
-          <Link to="/projects" className="project-back">
+          <Link to="/" className="project-back">
             &#8592; BACK TO PROJECTS
           </Link>
 

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Routes, Route} from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { useTheme } from "./hooks/useTheme";
 import Header from "./components/Header";
 import SideMenu from "./components/SideMenu";
@@ -21,12 +21,23 @@ function Home() {
   )
 }
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { theme, toggleTheme } = useTheme()
 
   return (
     <>
+      <ScrollToTop />
       <Header onMenuOpen={() => setIsMenuOpen(true)} />
 
       <SideMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}

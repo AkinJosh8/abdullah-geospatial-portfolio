@@ -37,6 +37,7 @@ const projects = [
       { value: "99.14%", label: "FROM VEGETATION", },
       { value: "87.5%", label: "OVERALL ACCURACY", },
     ],
+    github: "https://github.com/Abdullahabdazeez/ibadan-lulc-change",
     tasks: [
       "Defined the Ibadan metropolitan study area boundary covering 3,220.581 km² across Ibadan and surrounding Oyo State local government areas",
       "Acquired Landsat Collection 2 Surface Reflectance imagery for 2013 and 2023 via Google Earth Engine",
@@ -69,7 +70,7 @@ const projects = [
   number: "02",
   slug: "abuja-urban-growth",
   featured: false,
-  year: "2025 → 2035",
+  year: "2025 - 2035",
   category: "URBAN GROWTH / CA-MARKOV",
   location: "Federal Capital Territory, Abuja, Nigeria",
   title: "Urban Growth Prediction Using CA-Markov Spatial Modelling",
@@ -81,6 +82,7 @@ const projects = [
     { value: "203,889", label: "CELLS ALLOCATED",},
     { value: "49.27%", label: "OVERALL ACCURACY",},
   ],
+  github: "https://github.com/Abdullahabdazeez/abuja-urban-growth-ca-markov",
   tasks: [
     "Defined the planning question: where is Abuja likely to expand by 2035, and how can planners prepare",
     "Sourced Landsat imagery for 2015 and 2025 through Google Earth Engine",
@@ -122,7 +124,7 @@ const projects = [
     { value: "86.64%", label: "2018 FLOOD CAPTURE", },
     { value: "91.21%", label: "MEAN CLASS AGREEMENT", },
   ],
-
+  github: "https://github.com/Abdullahabdazeez/lokoja-flood-risk-mcda",
   tasks: [
     "Defined the planning question: where physical flood susceptibility concentrates in Lokoja LGA, how it aligns with historical flooding, and how population vulnerability changes the picture",
     "Assembled eight flood-conditioning factor layers: distance to drainage, elevation, rainfall, slope, drainage density, land cover, clay content and NDVI",
@@ -167,7 +169,7 @@ const projects = [
     { value: "5.41M", label: "PEOPLE UNDERSERVED", },
     { value: "219", label: "TRANSIT ACCESS POINTS", },
   ],
-
+  github: "https://github.com/Abdullahabdazeez/lagos-public-transport-accessibility",
   tasks: [
     "Assembled four spatial layers: LGA boundaries, WorldPop 2020 population raster, OSM pedestrian network, and 219 mapped formal/core transit access points",
     "Standardized all data to WGS 84 / UTM Zone 31N (EPSG:32631)",
@@ -211,7 +213,7 @@ const projects = [
     { value: "15 MIN", label: "TRAVEL-TIME THRESHOLD", },
     { value: "1.26%", label: "GAIN UNDER +20",},
   ],
-
+  github: "https://github.com/Abdullahabdazeez/kano-primary-healthcare-accessibility",
   tasks: [
     "Compiled and validated 1,584 PHC locations, 484 ward boundaries and 16,789 population-demand cells for Kano State",
     "Built a road-network travel-time model instead of relying on straight-line distance",
@@ -256,7 +258,7 @@ const projects = [
     { value: "1,123.1 km²", label: "FOREST LOSS",},
     { value: "77.8%", label: "ROBUSTNESS SCENARIOS",},
   ],
-
+  github: "https://github.com/Abdullahabdazeez/northern-nigeria-drought-monitoring",
   tasks: [
     "Assembled MODIS NDVI/EVI and CHIRPS rainfall time series for Northern Nigeria from 2001–2025",
     "Stratified the study area into five GAEZ length-of-growing-period agro-climatic zones instead of state boundaries",
@@ -301,7 +303,7 @@ const projects = [
     { value: "0.332", label: "PR-AUC",},
     { value: "4.25%", label: "VERY HIGH SUITABILITY",},
   ],
-
+  github: "https://github.com/Abdullahabdazeez/enugu-ml-land-suitability",
   tasks: [
     "Audited the earlier Enugu suitability workflow and identified target leakage from distance-based sample construction",
     "Reconstructed the 2020–2025 expansion labels using stable non-built controls drawn from the same 30–90 m near-urban support as the observed expansion pixels",
@@ -347,7 +349,7 @@ const projects = [
     { value: "13", label: "CASES RETAINED",},
     { value: "0", label: "CONFIRMED ABANDONED",},
   ],
-
+  github: "https://github.com/Abdullahabdazeez/borno-conflict-displacement",
   tasks: [
     "Compiled a statewide settlement universe of 2,455 GeoNames populated places across Borno State's 27 LGAs",
     "Attached satellite-derived built-signal change data, including Dynamic World outputs, to every settlement",
@@ -392,7 +394,7 @@ const projects = [
     { value: "72.30%", label: "BUILT-UP LAND PRIORITY",},
     { value: "41.54 / 100", label: "MEAN CAPACITY", },
   ],
-
+  github: "https://github.com/Abdullahabdazeez/tartu-ugi-ecosystem-service-deficit",
   tasks: [
     "Defined the reporting area (38.8872 km²) and aligned it to EPSG:3301 on a common 10 m grid",
     "Derived seven Sentinel-2 spectral indices: NDVI, EVI, NDMI, NDBI, MNDWI, SAVI and BSI",
@@ -437,6 +439,7 @@ const projects = [
       { value: "72.17%", label: "HIGH / VERY HIGH",},
       { value: "0.9531", label: "ROC-AUC",},
     ],
+    github: "https://github.com/Abdullahabdazeez/ayetoro-3d-coastal-vulnerability",
     tasks: [
       "Reviewed and cleaned OpenStreetMap building footprints across Ayetoro",
       "Cross-checked footprints against Google Open Buildings V3 to find missed structures",

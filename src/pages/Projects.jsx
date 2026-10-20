@@ -8,7 +8,7 @@ function Projects() {
         <div className="container">
           <div className="projects-heading">
             <p className="projects-label">
-              03 / PROJECT ARCHIVE
+              PROJECT ARCHIVE
             </p>
 
             <p className="projects-intro">
@@ -19,10 +19,10 @@ function Projects() {
           </div>
 
           <div className="projects-count">
-            <span>PROJECT ARCHIVE</span>
             <strong>
               {String(projects.length).padStart(2, "0")}
             </strong>
+            <span>PROJECT ARCHIVE</span>
           </div>
         </div>
       </section>

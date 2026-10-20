@@ -1,5 +1,5 @@
 .regional-map {
-  padding-top: 4rem;
+  padding-top: 2rem;
   padding-bottom: 5rem;
 }
 
@@ -160,10 +160,10 @@
 .regional-map-content {
   position: absolute;
   top: 50%;
-  left: 5%;
+  left: clamp(1.25rem, 3vw, 4.25rem);
   z-index: 5;
 
-  width: min(45%, 620px);
+  width: min(42%, 560px);
 
   transform: translateY(-50%);
 }
@@ -175,9 +175,9 @@
 
   font-family: var(--font-mono);
   font-size: clamp(
-    0.55rem,
-    0.7vw,
-    0.7rem
+    0.58rem,
+    0.72vw,
+    0.8rem
   );
 
   letter-spacing: 0.1em;
@@ -185,14 +185,15 @@
 
 .regional-map-title {
   margin: 0;
+  max-width: 520px;
 
   color: var(--color-text);
 
   font-family: var(--font-display);
   font-size: clamp(
-    2.5rem,
-    4.5vw,
-    5.5rem
+    2.6rem,
+    4.2vw,
+    5.1rem
   );
 
   font-weight: 600;
@@ -210,7 +211,7 @@
   color: var(--color-text-muted);
 
   font-family: var(--font-mono);
-  font-size: 0.55rem;
+  font-size: clamp(0.48rem, 0.7vw, 0.58rem);
   letter-spacing: 0.07em;
 }
 
@@ -276,7 +277,7 @@
 @media (min-width: 769px) and (max-width: 1024px) {
 
   .regional-map {
-    padding-top: 3rem;
+    padding-top: 1.5rem;
     padding-bottom: 4rem;
   }
   .regional-map-visual {
@@ -284,26 +285,26 @@
   }
   .regional-map-content {
     top: 50%;
-    left: 5%;
-    width: 44%;
+    left: 4%;
+    width: 45%;
     transform: translateY(-50%);
   }
 
   .regional-map-label {
     margin-bottom: 0.9rem;
-    font-size: 0.56rem;
+    font-size: 0.58rem;
   }
 
   .regional-map-title {
-    max-width: 420px;
+    max-width: 390px;
 
     font-size: clamp(
-      2.4rem,
+      2.2rem,
       5vw,
-      4rem
+      3.9rem
     );
 
-    line-height: 0.9;
+    line-height: 0.92;
   }
 
   .regional-map-status {
@@ -369,43 +370,38 @@
 }
 
 @media (max-width: 768px) {
-
   .regional-map {
-    padding-top: 2.5rem;
+    padding-top: 1.25rem;
     padding-bottom: 3rem;
   }
-
   .regional-map-visual {
     min-height: 500px;
     width: 100%;
     margin-inline: 0.6rem;
   }
-
   .regional-map-content {
-    top: 2rem;
+    top: 1.5rem;
     left: 1.25rem;
     width: calc(100% - 2.5rem);
     transform: none;
   }
-
   .regional-map-label {
     margin-bottom: 0.9rem;
-    font-size: 0.55rem;
+    font-size: 0.53rem;
   }
-
   .regional-map-title {
-    max-width: 340px;
+    max-width: 310px;
     font-size: clamp(
-      2.4rem,
+      2.1rem,
       10vw,
-      3.6rem
+      3.2rem
     );
     line-height: 0.92;
   }
 
   .regional-map-status {
     margin-top: 1.25rem;
-    font-size: 0.48rem;
+    font-size: 0.47rem;
   }
 
   .regional-map-background {

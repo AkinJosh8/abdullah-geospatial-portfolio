@@ -46,11 +46,22 @@ function ProjectCard({ project }) {
 
           <div className="project-actions">
             <Link  to={`/projects/${project.slug}`}  className="project-view"  >
-              <span>VIEW PROJECT DETAILS</span>
+              <span>View project details</span>
               <span>&#10132;</span>
             </Link>
+            {project.github ? (
+              <a
+                href={project.github}
+                className="project-github"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>GitHub</span>
+                <span>&#10132;</span>
+              </a>
+            ) : null}
             <a  href={project.document} className="project-download"  download>
-              <span>DOWNLOAD DOCUMENT</span>
+              <span>Download document</span>
               <span>&#10132;</span>
             </a>
           </div>

@@ -9,19 +9,23 @@ function About() {
 
           <div className="about-intro">
 
-            <p className="about-label">
-              04 / ABOUT
-            </p>
+            <div className="about-intro-copy">
+              <p className="about-label">
+                04 / ABOUT
+              </p>
 
-            <h2 className="about-title">
-              SPATIAL THINKING.
-              <br />
-              PLANNING WITH DATA.
-            </h2>
+              <h2 className="about-title">
+                <span className="about-title-line">SPATIAL THINKING.</span>
+                <br />
+                <span className="about-title-line about-title-line--tight">PLANNING WITH DATA</span>
+              </h2>
 
-            <p className="about-focus">
-              URBAN PLANNING / GIS / EARTH OBSERVATION
-            </p>
+              <div className="about-focus-row">
+                <span>Urban planning</span>
+                <span>GIS</span>
+                <span>Earth observation</span>
+              </div>
+            </div>
 
             <div className="about-image">
               <img
@@ -32,82 +36,78 @@ function About() {
 
           </div>
 
-          <div className="about-content">
+          <div className="about-copy">
 
-            <div className="about-copy">
+            <p>
+              I am an Urban and Regional Planner specialising in
+              geospatial science, Earth observation, and spatial data
+              analysis, with research experience spanning land-cover
+              change, urban growth, flood and coastal risk, drought,
+              and accessibility.
+            </p>
 
-              <p>
-                I am an Urban and Regional Planner specialising in
-                geospatial science, Earth observation, and spatial data
-                analysis, with research experience spanning land-cover
-                change, urban growth, flood and coastal risk, drought,
-                and accessibility.
-              </p>
+            <p>
+              I use GIS, Google Earth Engine, and Python to analyse
+              Sentinel-2, Landsat, and MODIS datasets, applying methods
+              such as Random Forest and Extra Trees classification,
+              CA–Markov modelling, 2SFCA, and AHP/MCDA.
+            </p>
 
-              <p>
-                I use GIS, Google Earth Engine, and Python to analyse
-                Sentinel-2, Landsat, and MODIS datasets, applying methods
-                such as Random Forest and Extra Trees classification,
-                CA–Markov modelling, 2SFCA, and AHP/MCDA.
-              </p>
+            <p>
+              Through my studies, I have developed a strong interest
+              in using spatial evidence and environmental data to
+              understand climate and urban risks, assess vulnerability,
+              and support sustainable and resilient planning.
+            </p>
 
-              <p>
-                Through my studies, I have developed a strong interest
-                in using spatial evidence and environmental data to
-                understand climate and urban risks, assess vulnerability,
-                and support sustainable and resilient planning.
-              </p>
+          </div>
+
+          <div className="about-capabilities">
+
+            <p className="about-capabilities-label">
+              TECHNICAL FOCUS
+            </p>
+
+            <div className="about-capability-group">
+
+              <span className="about-group-label">
+                CORE TOOLS
+              </span>
+
+              <div className="about-tags">
+                <span>GIS</span>
+                <span>GOOGLE EARTH ENGINE</span>
+                <span>PYTHON</span>
+              </div>
 
             </div>
 
-            <div className="about-capabilities">
+            <div className="about-capability-group">
 
-              <p className="about-capabilities-label">
-                TECHNICAL FOCUS
-              </p>
+              <span className="about-group-label">
+                DATA
+              </span>
 
-              <div className="about-capability-group">
-
-                <span className="about-group-label">
-                  CORE TOOLS
-                </span>
-
-                <div className="about-tags">
-                  <span>GIS</span>
-                  <span>GOOGLE EARTH ENGINE</span>
-                  <span>PYTHON</span>
-                </div>
-
+              <div className="about-tags">
+                <span>SENTINEL-2</span>
+                <span>LANDSAT</span>
+                <span>MODIS</span>
               </div>
 
-              <div className="about-capability-group">
+            </div>
 
-                <span className="about-group-label">
-                  DATA
-                </span>
+            <div className="about-capability-group">
 
-                <div className="about-tags">
-                  <span>SENTINEL-2</span>
-                  <span>LANDSAT</span>
-                  <span>MODIS</span>
-                </div>
+              <span className="about-group-label">
+                METHODS
+              </span>
 
-              </div>
-
-              <div className="about-capability-group">
-
-                <span className="about-group-label">
-                  METHODS
-                </span>
-
-                <div className="about-tags">
-                  <span>RANDOM FOREST</span>
-                  <span>EXTRA TREES</span>
-                  <span>CA–MARKOV</span>
-                  <span>2SFCA</span>
-                  <span>AHP / MCDA</span>
-                </div>
-
+              <div className="about-tags">
+                <span>RANDOM FOREST</span>
+                <span>EXTRA TREES</span>
+                <span>CA–MARKOV</span>
+                <span>2SFCA</span>
+                <span>AHP / MCDA</span>
               </div>
 
             </div>
