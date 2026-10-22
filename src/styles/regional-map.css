@@ -2,28 +2,16 @@
   padding-top: 2rem;
   padding-bottom: 5rem;
 }
-
 .regional-map-visual {
   position: relative;
   width: calc(100% - 2rem);
-  min-height: 520px;
+  min-height: 580px;
   overflow: hidden;
-  margin-inline: 1rem;
-  background:
-    linear-gradient(
-      rgba(0, 128, 128, 0.08) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(0, 128, 128, 0.08) 1px,
-      transparent 1px
-    ),
-    var(--color-surface);
+  margin-inline: 2rem;
+  background: linear-gradient( rgba(0, 128, 128, 0.08) 1px, transparent 1px ), linear-gradient( 90deg, rgba(0, 128, 128, 0.08) 1px, transparent 1px ), var(--color-surface);
   background-size: 40px 40px;
   border: 1px solid var(--color-border);
 }
-
 .regional-map-background {
   position: absolute;
   inset: 0;
@@ -32,250 +20,153 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background:
-    radial-gradient(
-      circle at 65% 50%,
-      rgba(0, 168, 150, 0.1),
-      transparent 45%
-    );
+  background: radial-gradient( circle at 65% 50%, rgba(0, 168, 150, 0.1), transparent 45%);
 }
-
 .regional-map-svg {
   display: block;
   width: 100%;
   height: 100%;
 }
-
-
 .country {
   fill: transparent;
   stroke: var(--color-border);
   stroke-width: 0.7;
   vector-effect: non-scaling-stroke;
-
-  transition:
-    fill var(--transition-base),
-    stroke var(--transition-base);
+  transition: fill var(--transition-base), stroke var(--transition-base);
 }
-
 .country.nigeria {
   fill: rgba(0, 168, 150, 0.2);
   stroke: var(--color-primary);
   stroke-width: 1.2;
 }
-
-
 .nigeria-marker-ring {
   fill: none;
   stroke: var(--color-primary);
   stroke-width: 1;
   opacity: 0.8;
-
   animation: nigeriaPulse 2s infinite;
 }
-
 .nigeria-marker-dot {
   fill: var(--color-primary);
-
-  filter:
-    drop-shadow(
-      0 0 5px var(--color-primary)
-    );
+  filter: drop-shadow(  0 0 5px var(--color-primary));
 }
-
-
 .map-label {
   position: absolute;
   z-index: 2;
-
   color: var(--color-text-muted);
-
   font-family: var(--font-mono);
   font-size: 0.5rem;
   letter-spacing: 0.06em;
-
   pointer-events: none;
 }
-
 .map-mali {
   top: 22%;
-  left: 59%;
+  left: 61%;
 }
-
 .map-niger {
   top: 12%;
-  left: 75%;
+  left: 77%;
 }
-
 .map-chad {
   top: 31%;
-  left: 88%;
+  left: 92%;
 }
-
 .map-cameroon {
   top: 66%;
-  left: 80%;
+  left: 85%;
 }
-
 .map-nigeria {
   top: 49%;
-  left: 70%;
+  left: 80%;
   color: var(--color-primary);
 }
-
 .regional-map-visual::before {
   content: "";
-
   position: absolute;
   inset: 0;
   z-index: 1;
-
-  background:
-    linear-gradient(
-      90deg,
-      color-mix(
-        in srgb,
-        var(--color-bg) 88%,
-        transparent
-      ) 0%,
-
-      color-mix(
-        in srgb,
-        var(--color-bg) 65%,
-        transparent
-      ) 28%,
-
-      color-mix(
-        in srgb,
-        var(--color-bg) 15%,
-        transparent
-      ) 55%,
-
-      transparent 75%
-    );
-
+  background: linear-gradient( 90deg, color-mix( in srgb, var(--color-bg) 88%, transparent) 0%,
+    color-mix( in srgb, var(--color-bg) 65%, transparent) 28%,
+    color-mix( in srgb, var(--color-bg) 15%, transparent) 55%, transparent 75% );
   pointer-events: none;
 }
-
 .regional-map-content {
   position: absolute;
   top: 50%;
   left: clamp(1.25rem, 3vw, 4.25rem);
   z-index: 5;
-
   width: min(42%, 560px);
-
   transform: translateY(-50%);
 }
-
 .regional-map-label {
   margin-bottom: 1.2rem;
-
   color: var(--color-primary-light);
-
   font-family: var(--font-mono);
-  font-size: clamp(
-    0.58rem,
-    0.72vw,
-    0.8rem
-  );
-
+  font-size: clamp( 0.58rem, 0.72vw, 0.8rem );
   letter-spacing: 0.1em;
 }
-
 .regional-map-title {
   margin: 0;
   max-width: 520px;
-
   color: var(--color-text);
-
   font-family: var(--font-display);
-  font-size: clamp(
-    2.6rem,
-    4.2vw,
-    5.1rem
-  );
-
+  font-size: clamp( 1.6rem, 3.2vw, 4.1rem );
   font-weight: 600;
-  line-height: 0.9;
+  line-height: 1.1;
   letter-spacing: -0.055em;
 }
-
 .regional-map-status {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-
   margin-top: 2rem;
-
   color: var(--color-text-muted);
-
   font-family: var(--font-mono);
-  font-size: clamp(0.48rem, 0.7vw, 0.58rem);
+  font-size: clamp(0.68rem, 0.8vw, 0.68rem);
   letter-spacing: 0.07em;
 }
-
 .map-coordinate {
   position: absolute;
   right: 1.5rem;
   bottom: 1.25rem;
   z-index: 5;
-
   color: var(--color-text-muted);
-
   font-family: var(--font-mono);
   font-size: 0.5rem;
   letter-spacing: 0.06em;
 }
-
 .map-scan-line {
   position: absolute;
   top: 0;
   left: 0;
-
   width: 100%;
   height: 1px;
-
   z-index: 4;
-
   background: var(--color-primary);
   opacity: 0.25;
-
   animation: scanMap 5s linear infinite;
-
   pointer-events: none;
 }
-
 @keyframes nigeriaPulse {
   0% {
-    r: 10;
-    opacity: 0.8;
+    r: 10; opacity: 0.8;
   }
-
   70% {
-    r: 24;
-    opacity: 0;
+    r: 24; opacity: 0;
   }
-
   100% {
-    r: 24;
-    opacity: 0;
+    r: 24; opacity: 0;
   }
 }
-
 @keyframes scanMap {
   0% {
     transform: translateY(0);
   }
-
   100% {
     transform: translateY(520px);
   }
 }
-
-
 @media (min-width: 769px) and (max-width: 1024px) {
-
   .regional-map {
     padding-top: 1.5rem;
     padding-bottom: 4rem;
@@ -289,75 +180,51 @@
     width: 45%;
     transform: translateY(-50%);
   }
-
   .regional-map-label {
     margin-bottom: 0.9rem;
     font-size: 0.58rem;
   }
-
   .regional-map-title {
     max-width: 390px;
-
-    font-size: clamp(
-      2.2rem,
-      5vw,
-      3.9rem
-    );
-
+    font-size: clamp( 2.2rem, 5vw, 3.9rem );
     line-height: 0.92;
   }
-
   .regional-map-status {
     margin-top: 1.3rem;
     font-size: 0.48rem;
   }
-
   .regional-map-background {
     top: 0;
     right: 0;
     bottom: 0;
     left: 42%;
-
     width: auto;
-
-    background:
-      radial-gradient(
-        circle at 55% 50%,
-        rgba(0, 168, 150, 0.12),
-        transparent 55%
-      );
+    background: radial-gradient( circle at 55% 50%, rgba(0, 168, 150, 0.12), transparent 55% );
   }
-
   .regional-map-svg {
     width: 115%;
     height: 115%;
     flex-shrink: 0;
   }
-
   .map-label {
     font-size: 0.42rem;
   }
-
   .map-mali {
     top: 22%;
     left: 20%;
   }
-
   .map-niger {
     top: 14%;
     left: 55%;
   }
-
   .map-chad {
     top: 32%;
     left: 82%;
   }
-
   .map-cameroon {
     top: 67%;
     left: 72%;
   }
-
   .map-nigeria {
     top: 49%;
     left: 51%;
@@ -368,7 +235,6 @@
     font-size: 0.42rem;
   }
 }
-
 @media (max-width: 768px) {
   .regional-map {
     padding-top: 1.25rem;
@@ -391,19 +257,13 @@
   }
   .regional-map-title {
     max-width: 310px;
-    font-size: clamp(
-      2.1rem,
-      10vw,
-      3.2rem
-    );
+    font-size: clamp( 2.1rem, 10vw, 3.2rem );
     line-height: 0.92;
   }
-
   .regional-map-status {
     margin-top: 1.25rem;
     font-size: 0.47rem;
   }
-
   .regional-map-background {
     top: 38%;
     right: 0;
@@ -411,12 +271,7 @@
     left: 0;
     width: 100%;
     height: 62%;
-    background:
-      radial-gradient(
-        circle at 55% 50%,
-        rgba(0, 168, 150, 0.12),
-        transparent 55%
-      );
+    background: radial-gradient( circle at 55% 50%, rgba(0, 168, 150, 0.12), transparent 55% );
   }
   .regional-map-svg {
     width: 125%;
@@ -455,7 +310,6 @@
     animation-name: scanMapMobile;
   }
 }
-
 @keyframes scanMapMobile {
   0% {
     transform: translateY(0);

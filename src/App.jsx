@@ -9,15 +9,23 @@ import ProjectsSection from "./components/ProjectsSection";
 import ProjectDetails from "./pages/ProjectDetails";
 import Projects from "./pages/Projects";
 import About from "./components/About";
+import Experience from "./components/Experience";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function Home() {
   return (
-    <main>
-      <Hero />
-      <RegionalMap />
-      <ProjectsSection />
-      <About />
-    </main>
+    <>
+      <main>
+        <Hero />
+        <RegionalMap />
+        <ProjectsSection />
+        <About />
+        <Experience />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   )
 }
 

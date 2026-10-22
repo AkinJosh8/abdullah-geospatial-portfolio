@@ -41,17 +41,39 @@
   --color-overlay: rgba(2, 6, 23, 0.7);
 }
 
+@media (max-width: 1024px) {
+  .site-header {
+    padding: 0;
+  }
+
+  .header-inner-container {
+    min-height: 44px;
+    padding: 0.6rem 0.85rem;
+    border-radius: 0;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .site-header {
-    padding: 0.75rem;
+    padding: 0;
   }
-  .header-inner {
-    min-height: 50px;
-    padding: 0.65rem 0.8rem;
+
+  .header-inner-container {
+    min-height: 42px;
+    padding: 0.55rem 0.8rem;
+    border-radius: 0;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
   }
+
   .brand-text {
     font-size: 0.65rem;
   }
+
   .menu-trigger {
     font-size: 0.65rem;
   }

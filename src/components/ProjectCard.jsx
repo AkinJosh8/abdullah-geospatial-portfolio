@@ -46,7 +46,7 @@ function ProjectCard({ project }) {
 
           <div className="project-actions">
             <Link  to={`/projects/${project.slug}`}  className="project-view"  >
-              <span>View project details</span>
+              <span>View Project Details</span>
               <span>&#10132;</span>
             </Link>
             {project.github ? (
@@ -61,7 +61,7 @@ function ProjectCard({ project }) {
               </a>
             ) : null}
             <a  href={project.document} className="project-download"  download>
-              <span>Download document</span>
+              <span>Download Document</span>
               <span>&#10132;</span>
             </a>
           </div>

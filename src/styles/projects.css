@@ -370,7 +370,6 @@
     width: 100%;
     gap: 0.5rem;
   }
-
   .project-view,
   .project-download,
   .project-github {
@@ -380,88 +379,71 @@
     justify-content: center;
     gap: 0.45rem;
     padding: 0.6rem 0.5rem;
-    font-size: 0.58rem;
+    font-size: 0.69rem;
   }
-
   .projects-page {
     padding-top: 3.5rem;
   }
-
   .projects-hero {
     padding-top: 1.25rem;
     padding-bottom: 1.5rem;
   }
-
   .projects-hero .container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 0.9rem;
   }
-
   .projects-heading {
     max-width: 100%;
   }
-
   .projects-label {
     margin-bottom: 0.75rem;
   }
-
   .projects-intro {
     max-width: 100%;
     font-size: 0.8rem;
     line-height: 1.6;
   }
-
   .projects-section {
-    padding-top: 0.5rem;
+    padding-top: 0.1rem;
   }
-
   .project-number,
   .project-meta {
-    font-size: 0.55rem;
+    font-size: 0.69rem;
   }
-
   .project-title {
     font-size: 1.5rem;
   }
-
   .project-abstract {
     font-size: 0.8rem;
   }
-
   .project-highlight strong {
     font-size: 1.15rem;
   }
-
   .project-highlight span,
   .project-tools span,
   .project-view,
   .project-download {
     font-size: 0.48rem;
   }
-
   .section-heading {
     gap: 0.9rem;
     padding-inline: 0.5rem;
   }
-
   .section-eyebrow {
     margin-bottom: 0.8rem;
-    font-size: 0.52rem;
+    font-size: 0.62rem;
   }
-
   .section-heading h2 {
     font-size: clamp(2.1rem, 9vw, 3.2rem);
     line-height: 1;
   }
-
   .section-intro {
     max-width: 100%;
     font-size: 0.8rem;
     line-height: 1.6;
   }
-
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 1rem;

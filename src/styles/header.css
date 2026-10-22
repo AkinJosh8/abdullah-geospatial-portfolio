@@ -4,36 +4,61 @@
   left: 0;
   z-index: 1000;
   width: 100%;
-  padding: 0.7rem var(--page-padding);
+  padding: 0;
+  background: color-mix(in srgb, var(--color-bg) 88%, transparent);
+  transition: background-color var(--transition-base), box-shadow var(--transition-base), backdrop-filter var(--transition-base);
 }
+
+.site-header.scrolled {
+  background: color-mix(in srgb, var(--color-bg) 88%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(15, 23, 42, 0.08);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.14);
+}
+
 .header-inner-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   min-height: 48px;
-  padding: 0.6rem 0.8rem;
-  background: color-mix(
-    in srgb,
-    var(--color-bg) 82%,
-    transparent
-  );
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  padding: 0.7rem 2.2rem;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
   pointer-events: auto;
 }
+
+@media (max-width: 1024px) {
+  .site-header {
+    padding: 0;
+    background: color-mix(in srgb, var(--color-bg) 92%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.12);
+  }
+
+  .header-inner-container {
+    min-height: 44px;
+    padding: 0.6rem 0.85rem;
+    background: transparent;
+    border: 0;
+  }
+}
+
 .site-brand {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
   color: var(--color-text);
   font-family: var(--font-mono);
-  font-size: 0.65rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1;
 }
+
 .brand-mark {
   display: grid;
   place-items: center;
@@ -49,16 +74,19 @@
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-  padding: 0.4rem;
+  padding: 0.45rem 0.6rem;
   color: var(--color-text);
   font-family: var(--font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.06em;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
   cursor: pointer;
+  line-height: 1;
 }
+
 .menu-trigger:hover {
   color: var(--color-primary);
 }
+
 .menu-trigger span:last-child {
   display: grid;
   place-items: center;
@@ -70,6 +98,7 @@
     transform var(--transition-base),
     background-color var(--transition-base);
 }
+
 .menu-trigger:hover span:last-child {
   transform: rotate(90deg);
   color: var(--color-bg);
