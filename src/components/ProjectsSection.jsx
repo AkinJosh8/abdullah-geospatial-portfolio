@@ -20,14 +20,13 @@ function ProjectsSection() {
             approaches to investigate real-world problems.
           </p>
         </div>
-        <div className="projects-grid">
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.number}
-              project={project}
-            />
-          ))}
-        </div>
+          <div className="projects-grid">
+            {projects.map((project) => (
+              <ProjectCard
+                key={project.number}
+                project={project} />
+            ))}
+          </div>
         <motion.div
           className="projects-footer"
           initial={{ opacity: 0 }}

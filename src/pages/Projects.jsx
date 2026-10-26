@@ -1,7 +1,25 @@
+import { useEffect } from "react";
 import projects from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
+import { setPageSeo } from "../utils/seo";
 
 function Projects() {
+  useEffect(() => {
+    setPageSeo({
+      title: "Project Archive | Abdullah Azeez",
+      description: "Browse the project archive of geospatial studies covering land-use change, urban planning, accessibility, flood risk, and climate analytics.",
+      canonicalPath: "/projects",
+      image: "/favicon.jpg",
+      jsonLd: {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        name: "Project Archive",
+        description: "Archive of geospatial and environmental projects by Abdullah Azeez.",
+        url: `${window.location.origin}/projects`
+      }
+    });
+  }, []);
+
   return (
     <main className="projects-page">
       <section className="projects-hero section">

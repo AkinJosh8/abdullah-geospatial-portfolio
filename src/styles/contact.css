@@ -2,7 +2,6 @@
   padding-top: 1rem;
   padding-bottom: 6rem;
 }
-
 .contact-shell {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
@@ -11,20 +10,23 @@
   width: min(calc(100% - (var(--page-padding) * 2)), 1180px);
   margin-inline: auto;
 }
-
 .contact-intro,
 .contact-panel {
   border: 1px solid var(--color-border);
-  background: rgba(255, 255, 255, 0.015);
+  background: color-mix(in srgb, var(--color-surface) 82%, transparent);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.03);
 }
-
 .contact-intro {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: clamp(1.5rem, 2vw, 2.5rem);
+  transition: border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
 }
-
+.contact-intro:hover {
+  border-color: rgba(0, 168, 150, 0.35);
+  box-shadow: 0 18px 32px rgba(15, 23, 42, 0.05);
+}
 .contact-label {
   margin: 0 0 1rem;
   color: var(--color-primary);
@@ -32,7 +34,6 @@
   font-size: clamp(0.6rem, 0.75vw, 0.8rem);
   letter-spacing: 0.1em;
 }
-
 .contact-title {
   margin: 0;
   color: var(--color-text);
@@ -41,11 +42,9 @@
   line-height: 0.9;
   letter-spacing: -0.06em;
 }
-
 .contact-title span {
   color: var(--color-primary);
 }
-
 .contact-copy {
   max-width: 34rem;
   margin-top: 1.25rem;
@@ -53,19 +52,16 @@
   font-size: clamp(0.92rem, 1vw, 1.08rem);
   line-height: 1.7;
 }
-
 .contact-panel {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   padding: clamp(1.25rem, 2vw, 2rem);
 }
-
 .contact-list {
   display: flex;
   flex-direction: column;
 }
-
 .contact-list li {
   display: grid;
   grid-template-columns: 110px minmax(0, 1fr);
@@ -74,11 +70,9 @@
   padding: 1rem 0;
   border-top: 1px solid var(--color-border);
 }
-
 .contact-list li:last-child {
   border-bottom: 1px solid var(--color-border);
 }
-
 .contact-list li span {
   color: var(--color-text-muted);
   font-family: var(--font-mono);
@@ -86,27 +80,24 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-
 .contact-list li a {
   color: var(--color-text);
   font-family: var(--font-display);
   font-size: clamp(1rem, 1.5vw, 1.32rem);
   line-height: 1.35;
   letter-spacing: -0.03em;
-  transition: color var(--transition-fast);
+  transition: color var(--transition-fast), transform var(--transition-fast);
 }
-
 .contact-list li a:hover {
   color: var(--color-primary);
+  transform: translateX(2px);
 }
-
 .contact-actions {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.6rem;
   margin-top: auto;
 }
-
 .contact-primary,
 .contact-secondary {
   display: grid;
@@ -116,31 +107,32 @@
   min-height: 58px;
   padding: 0.7rem 0.8rem;
   border: 1px solid var(--color-border);
-  background: rgba(255, 255, 255, 0.02);
-  transition:
-    transform var(--transition-fast),
-    border-color var(--transition-fast),
-    background-color var(--transition-fast),
-    box-shadow var(--transition-fast);
+  background: color-mix(in srgb, var(--color-surface) 88%, transparent);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast), color var(--transition-fast);
 }
-
 .contact-primary {
-  color: var(--color-bg);
+  color: #ffffff;
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   border-color: var(--color-primary);
   box-shadow: 0 12px 20px rgba(0, 128, 128, 0.12);
 }
-
 .contact-secondary {
   color: var(--color-text);
 }
-
 .contact-primary:hover,
 .contact-secondary:hover {
   transform: translateY(-2px);
   border-color: var(--color-primary);
+  box-shadow: 0 18px 26px rgba(0, 128, 128, 0.12);
+}
+.contact-primary:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
 }
 
+.contact-secondary:hover {
+  background: rgba(0, 168, 150, 0.04);
+}
 .cta-label {
   grid-column: 1 / -1;
   color: inherit;
@@ -150,7 +142,6 @@
   text-transform: uppercase;
   opacity: 0.82;
 }
-
 .cta-main {
   display: block;
   font-family: var(--font-display);
@@ -158,7 +149,6 @@
   line-height: 1.1;
   letter-spacing: -0.04em;
 }
-
 .cta-arrow {
   display: inline-flex;
   align-items: center;
@@ -170,81 +160,64 @@
   font-size: 0.9rem;
   justify-self: end;
 }
-
 .contact-secondary .cta-arrow {
   border-color: var(--color-border);
   color: var(--color-primary);
 }
-
 @media (min-width: 769px) and (max-width: 1024px) {
   .contact-shell {
     grid-template-columns: 1fr;
   }
-
   .contact-title {
     font-size: clamp(2.7rem, 7vw, 4.5rem);
   }
-
   .contact-list li {
     grid-template-columns: 100px minmax(0, 1fr);
   }
-
   .contact-actions {
     grid-template-columns: 1fr 1fr;
   }
 }
-
 @media (max-width: 768px) {
   .contact-section {
     padding-top: 0.5rem;
     padding-bottom: 4rem;
   }
-
   .contact-shell {
     grid-template-columns: 1fr;
     width: min(calc(100% - (var(--page-padding) * 2)), 1180px);
   }
-
   .contact-intro,
   .contact-panel {
     padding: 1.2rem 1rem;
   }
-
   .contact-label {
     font-size: 0.56rem;
   }
-
   .contact-title {
     font-size: clamp(2.3rem, 9vw, 3.5rem);
   }
-
   .contact-copy {
     font-size: 0.88rem;
   }
-
   .contact-list li {
     grid-template-columns: 1fr;
     gap: 0.45rem;
   }
-
   .contact-list li span {
     font-size: 0.56rem;
   }
-
   .contact-list li a {
     font-size: 1rem;
   }
-
   .contact-actions {
     grid-template-columns: 1fr;
   }
-
   .contact-primary,
   .contact-secondary {
     min-height: 52px;
     padding: 0.6rem 0.7rem;
   }
-
   .cta-main {
     font-size: 1rem;
   }

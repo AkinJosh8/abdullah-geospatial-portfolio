@@ -63,7 +63,7 @@
   padding: 0.45rem 0.75rem;
   color: var(--color-text-muted);
   border: 1px solid var(--color-border);
-  background: rgba(255, 255, 255, 0.02);
+  background: color-mix(in srgb, var(--color-surface) 82%, transparent);
   font-family: var(--font-mono);
   font-size: 0.48rem;
   letter-spacing: 0.06em;
@@ -108,7 +108,7 @@
   height: auto;
   min-height: 0;
   border: 1px solid var(--color-border);
-  background: rgba(255, 255, 255, 0.015);
+  background: color-mix(in srgb, var(--color-surface) 82%, transparent);
 }
 
 .about-copy p {
@@ -151,14 +151,14 @@
   gap: 1.25rem;
   padding: 1.15rem 1.15rem;
   border: 1px solid var(--color-border);
-  background: rgba(255, 255, 255, 0.015);
+  background: color-mix(in srgb, var(--color-surface) 82%, transparent);
   transition: border-color var(--transition-fast), transform var(--transition-fast), background-color var(--transition-fast);
 }
 
 .about-capability-group:hover {
   transform: translateY(-2px);
   border-color: var(--color-primary);
-  background: rgba(255, 255, 255, 0.025);
+  background: color-mix(in srgb, var(--color-surface) 92%, transparent);
 }
 
 .about-group-label {
@@ -260,6 +260,11 @@
     font-size: 0.56rem;
     padding: 0.42rem 0.6rem;
   }
+  .about-intro-copy {
+    padding-left: 0.5rem;
+    margin-left: 0.1rem;
+  }
+
   .about-image {
     width: calc(100% - 1.1rem);
     margin-inline: 0.55rem;
@@ -267,6 +272,8 @@
   }
   .about-copy {
     margin-top: 0;
+    margin-left: 0.35rem;
+    padding-left: 0.15rem;
   }
   .about-copy p {
     padding: 1rem 1rem;

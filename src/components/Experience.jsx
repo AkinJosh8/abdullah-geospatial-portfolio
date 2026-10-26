@@ -69,7 +69,6 @@ function Experience() {
                                     ))}
                                 </div>
                             </div>
-                            <span className="experience-arrow" aria-label="Read more">&#8593;</span>
                         </article>
                     ))}
                 </div> 

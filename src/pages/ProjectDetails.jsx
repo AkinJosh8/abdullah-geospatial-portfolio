@@ -1,12 +1,34 @@
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import projects from "../data/projects";
+import { loadProjectDocument, loadProjectMap } from "../data/projectAssets";
 
 function ProjectDetails() {
   const { slug } = useParams();
+  const [projectMap, setProjectMap] = useState("");
+  const [documentUrl, setDocumentUrl] = useState("");
 
   const project = projects.find(
     (item) => item.slug === slug
   );
+
+  useEffect(() => {
+    if (!project) return;
+
+    let isMounted = true;
+
+    loadProjectMap(project).then((mapUrl) => {
+      if (isMounted) setProjectMap(mapUrl ?? "");
+    });
+
+    loadProjectDocument(project).then((pdfUrl) => {
+      if (isMounted) setDocumentUrl(pdfUrl ?? "");
+    });
+
+    return () => {
+      isMounted = false;
+    };
+  }, [project]);
 
   if (!project) {
     return (
@@ -45,7 +67,7 @@ function ProjectDetails() {
             </div>
           </div>
           <div className="project-details-visual">
-            <img src={project.map} alt={`${project.title} project visual`} />
+            {projectMap ? <img src={projectMap} alt={`${project.title} project visual`} /> : null}
           </div>
         </div>
       </section>
@@ -105,7 +127,7 @@ function ProjectDetails() {
               <p>FULL PROJECT DOCUMENTATION</p>
               <span> Download the complete project report. </span>
             </div>
-            <a href={project.document} download className="project-download">
+            <a href={documentUrl || "#"} download={Boolean(documentUrl)} className="project-download">
               <span>DOWNLOAD FULL PROJECT</span>
               <span>&#10132;</span>
             </a>

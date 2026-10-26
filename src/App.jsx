@@ -1,33 +1,13 @@
-import { useEffect, useState } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useTheme } from "./hooks/useTheme";
 import Header from "./components/Header";
 import SideMenu from "./components/SideMenu";
-import Hero from "./components/Hero";
-import RegionalMap from "./components/RegionalMap";
-import ProjectsSection from "./components/ProjectsSection";
-import ProjectDetails from "./pages/ProjectDetails";
-import Projects from "./pages/Projects";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import { setPageSeo } from "./utils/seo";
 
-function Home() {
-  return (
-    <>
-      <main>
-        <Hero />
-        <RegionalMap />
-        <ProjectsSection />
-        <About />
-        <Experience />
-        <Contact />
-      </main>
-      <Footer />
-    </>
-  )
-}
+const HomePage = lazy(() => import("./pages/HomePage"));
+const ProjectDetails = lazy(() => import("./pages/ProjectDetails"));
+const Projects = lazy(() => import("./pages/Projects"));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -42,6 +22,48 @@ function ScrollToTop() {
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { theme, toggleTheme } = useTheme()
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const isProjectDetail = pathname.startsWith("/projects/") && pathname.split("/").filter(Boolean).length > 1;
+
+    if (pathname === "/") {
+      setPageSeo({
+        title: "Abdullah Azeez | Geospatial Analyst Portfolio",
+        description: "Geospatial analyst portfolio showcasing urban planning, GIS, climate risk, and land-use modelling projects.",
+        canonicalPath: "/",
+        image: "/favicon.jpg",
+        jsonLd: {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Abdullah Azeez",
+          jobTitle: "Geospatial Analyst",
+          description: "Urban planning and geospatial analyst focused on climate risk, land-use change, and spatial analytics.",
+          url: `${window.location.origin}/`,
+          sameAs: [
+            "https://www.linkedin.com/in/abdullah-ayomide",
+            "https://github.com/Abdullahabdazeez"
+          ]
+        }
+      });
+    }
+
+    if (pathname === "/projects" && !isProjectDetail) {
+      setPageSeo({
+        title: "Project Archive | Abdullah Azeez",
+        description: "Browse the project archive of geospatial studies covering land-use change, urban planning, accessibility, flood risk, and climate analytics.",
+        canonicalPath: "/projects",
+        image: "/favicon.jpg",
+        jsonLd: {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Project Archive",
+          description: "Archive of geospatial and environmental projects by Abdullah Azeez.",
+          url: `${window.location.origin}/projects`
+        }
+      });
+    }
+  }, [pathname]);
 
   return (
     <>
@@ -52,12 +74,13 @@ function App() {
         theme={theme} onThemeToggle={toggleTheme}
       />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects /> }/>
-        <Route path="/projects/:slug" element={<ProjectDetails />} />
-
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:slug" element={<ProjectDetails />} />
+        </Routes>
+      </Suspense>
     </>
   );
 }

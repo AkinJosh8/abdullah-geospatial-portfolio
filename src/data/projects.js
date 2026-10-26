@@ -1,25 +1,3 @@
-import map1 from "../assets/maps/map-01-ibadan.png"
-import map2 from "../assets/maps/map-02-abuja.png"
-import map3 from "../assets/maps/map-03-lokoja.png"
-import map4 from "../assets/maps/map-04-lagos.png"
-import map5 from "../assets/maps/map-05-kano.png"
-import map6 from "../assets/maps/map-06-northern nigeria.png"
-import map7 from "../assets/maps/map-07-enugu.png"
-import map8 from "../assets/maps/map-08-borno.png"
-import map9 from "../assets/maps/map-09-tartu.png"
-import map10 from "../assets/maps/map-10-ayetoro.png"
-
-import pdf1 from "../assets/documents/Project_01_Ibadan_LULC_report.pdf"
-import pdf2 from "../assets/documents/Project_02_Abuja_Urban_Growth_report.pdf"
-import pdf3 from "../assets/documents/Project_03_Lokoja_Flood_Risk_report.pdf"
-import pdf4 from "../assets/documents/Project_04_Lagos_Public_Transport_Accessibility_report.pdf"
-import pdf5 from "../assets/documents/Project_05_Kano_PHC_Accessibility_report.pdf"
-import pdf6 from "../assets/documents/Project_06_Northern_Nigeria_Drought_Vegetation_Stress_report.pdf"
-import pdf7 from "../assets/documents/Project_07_Enugu_Near_Urban_Expansion_Suitability_report.pdf"
-import pdf8 from "../assets/documents/Project_08_Borno_Settlement_Change_report.pdf"
-import pdf9 from "../assets/documents/Project_09_Tartu_UGI_Ecosystem_Service_Deficit_report.pdf"
-import pdf10 from "../assets/documents/Project_10_Ayetoro_Coastal_Vulnerability_report.pdf"
-
 const projects = [
   {
     number: "01",
@@ -30,8 +8,8 @@ const projects = [
     location: "Ibadan Metropolitan Area, Oyo State, Nigeria",
     title: "Ibadan Land-Cover Change and Urban Expansion",
     abstract: "This project measures how Ibadan's land cover changed between 2013 and 2023 across a 3,220.581 km² metropolitan study area and identifies what kind of land was converted as the city expanded. Landsat Surface Reflectance imagery was classified into four land-cover classes using Random Forest, followed by pixel-by-pixel post-classification change detection.",
-    map: map1,
-    document: pdf1,
+    map: null,
+    document: null,
     tools: [ "Landsat", "Google Earth Engine", "Random Forest", "Python", "GIS", ],
     highlights: [ { value: "230.311 km²", label: "NET BUILT-UP GROWTH", },
       { value: "99.14%", label: "FROM VEGETATION", },
@@ -75,8 +53,8 @@ const projects = [
   location: "Federal Capital Territory, Abuja, Nigeria",
   title: "Urban Growth Prediction Using CA-Markov Spatial Modelling",
   abstract: "This project models where Abuja's built-up area is most likely to expand by 2035 using a quantity-constrained CA-Markov scenario built on Landsat imagery processed in Google Earth Engine. Historical land-cover transitions were used to estimate future built-up demand, while an urban-expansion suitability surface ranked candidate locations for allocating new built-up cells.",
-  map: map2,
-  document: pdf2,
+  map: null,
+  document: null,
   tools: [ "Landsat","Google Earth Engine","CA-Markov","Python", "GIS",],
   highlights: [{ value: "183.45 km²", label: "NET BUILT-UP GAIN", },
     { value: "203,889", label: "CELLS ALLOCATED",},
@@ -117,8 +95,8 @@ const projects = [
   location: "Lokoja LGA, Kogi State, Nigeria",
   title: "Flood Risk and Settlement Vulnerability Assessment",
   abstract: "This project develops a physical flood hazard model for Lokoja LGA by combining eight flood-conditioning factors into a continuous Flood Hazard Index using AHP-weighted linear combination. The model was calibrated and validated against mapped flood evidence from the 2012, 2018 and 2022 events, with population-informed exposure kept separate from physical hazard to support distinct planning decisions.",
-  map: map3,
-  document: pdf3,
+  map: null,
+  document: null,
   tools: ["DEM Analysis", "AHP / MCDA", "Google Earth Engine", "Python", "GIS", ],
   highlights: [ {value: "1,136.71 km²", label: "HIGH / VERY HIGH", },
     { value: "86.64%", label: "2018 FLOOD CAPTURE", },
@@ -162,8 +140,8 @@ const projects = [
   location: "Lagos Metropolitan Area, Lagos State, Nigeria",
   title: "Public Transport Accessibility and Mobility Gap Analysis",
   abstract: "This project measures walking accessibility to Lagos State's mapped formal/core public-transport network, including bus, BRT and rail access points. Using WorldPop population data, a validated OpenStreetMap pedestrian network and multi-source shortest-path analysis, the study identifies population groups beyond 30-minute walking access and distinguishes structural network gaps from time-based accessibility gaps.",
-  map: map4,
-  document: pdf4,
+  map: null,
+  document: null,
   tools: [ "WorldPop", "Network Analysis", "Python", "GIS", ],
   highlights: [{ value: "46.56%", label: "BEYOND 30-MIN ACCESS", },
     { value: "5.41M", label: "PEOPLE UNDERSERVED", },
@@ -206,8 +184,8 @@ const projects = [
   location: "Kano Metropolitan Area, Kano State, Nigeria",
   title: "Healthcare Accessibility and Spatial Inequality Analysis",
   abstract: "This project combined road-network travel time with a 15-minute two-step floating catchment area (2SFCA) model to measure primary healthcare accessibility across Kano State. The analysis evaluated 1,584 PHCs, 484 operational wards and 16,789 population-demand cells, then tested 97 candidate sites and +5, +10 and +20 PHC expansion scenarios to assess potential improvements in modelled spatial accessibility.",
-  map: map5,
-  document: pdf5,
+  map: null,
+  document: null,
   tools: [ "Network Analysis", "2SFCA", "Python", "GIS", ],
   highlights: [{ value: "1,584", label: "PHCS ANALYSED", },
     { value: "15 MIN", label: "TRAVEL-TIME THRESHOLD", },
@@ -251,8 +229,8 @@ const projects = [
   location: "Northern Nigeria",
   title: "Drought and Vegetation Stress Monitoring Using Time-Series Remote Sensing",
   abstract: "This analysis tests whether vegetation browning across Northern Nigeria is associated with rainfall decline or whether land-use change provides a stronger explanation. MODIS NDVI/EVI and CHIRPS rainfall data from 2001–2025 were analysed across GAEZ length-of-growing-period zones using Sen/Theil-Sen trends, Hamed-Rao modified Mann-Kendall significance testing and false discovery rate correction.",
-  map: map6,
-  document: pdf6,
+  map: null,
+  document: null,
   tools: [ "MODIS", "CHIRPS", "Mann-Kendall", "GAEZ Zoning", "Python", ],
   highlights: [ { value: "-0.002754/yr", label: "NDVI TREND",},
     { value: "1,123.1 km²", label: "FOREST LOSS",},
@@ -296,8 +274,8 @@ const projects = [
   location: "Enugu State, Nigeria",
   title: "Machine Learning-Based Land Suitability Analysis for Sustainable Urban Development",
   abstract: "This project evaluates whether baseline terrain, accessibility, population and land-cover conditions can distinguish near-urban pixels in Enugu State that transitioned to built-up land between 2020 and 2025 from pixels that remained non-built. A corrected Extra Trees model was developed after auditing an earlier workflow for target leakage, then evaluated on a spatially separated independent Test set against a distance-only benchmark.",
-  map: map7,
-  document: pdf7,
+  map: null,
+  document: null,
   tools: [ "Extra Trees", "scikit-learn", "Google Earth Engine", "Python", ],
   highlights: [{ value: "0.727", label: "ROC-AUC",},
     { value: "0.332", label: "PR-AUC",},
@@ -342,8 +320,8 @@ const projects = [
   location: "Borno State, Nigeria",
   title: "Conflict-Induced Displacement and Settlement Abandonment Detection Using Geospatial Analysis",
   abstract: "This project screened 2,455 settlements across all 27 local government areas of Borno State to identify where independent geospatial indicators agree that a settlement has contracted. Settlement locations, conflict exposure, night-time lights, satellite-derived built-signal change and modelled population change were combined into a common settlement-level evidence table, narrowing the statewide screening to 13 locations requiring closer interpretation.",
-  map: map8,
-  document: pdf8,
+  map: null,
+  document: null,
   tools: [ "VIIRS Night-Lights", "ACLED", "Dynamic World", "WorldPop", "Python",],
   highlights: [{ value: "2,455", label: "SETTLEMENTS SCREENED", },
     { value: "13", label: "CASES RETAINED",},
@@ -387,8 +365,8 @@ const projects = [
   location:"Tartu, Estonia",
   title: "Urban Green Infrastructure and Ecosystem Service Deficit Mapping",
   abstract: "This project assessed where demand for urban ecosystem services outpaces the local capacity of green infrastructure in Tartu, Estonia. Sentinel-2 spectral indices, Dynamic World land cover and WorldPop 2020 population data were combined on a common 10 m grid to classify seven green-infrastructure classes and develop independent capacity, demand and ecosystem-service deficit layers.",
-  map: map9,
-  document: pdf9,
+  map: null,
+  document: null,
   tools: [ "Sentinel-2","Dynamic World", "WorldPop", "Python", "GIS",],
   highlights: [{ value: "40.17%", label: "HIGH / VERY HIGH PRIORITY",},
     { value: "72.30%", label: "BUILT-UP LAND PRIORITY",},
@@ -432,8 +410,8 @@ const projects = [
     location: "Ayetoro, Ilaje LGA, Ondo State, Nigeria",
     title: "3D Coastal Erosion and Settlement Vulnerability Visualisation for Climate Adaptation Planning",
     abstract: "This project builds a building-level Coastal Vulnerability Index (CVI) for Ayetoro, a low-lying coastal settlement in Ilaje LGA, Ondo State, Nigeria, to identify which buildings are relatively more exposed to coastal pressure and where adaptation attention should concentrate first.",
-    map: map10,
-    document: pdf10,
+    map: null,
+    document: null,
     tools: [ "OpenStreetMap", "DEM Analysis", "3D Visualisation", "Python", "GIS", ],
     highlights: [{ value: "1,628",  label: "BUILDINGS",},
       { value: "72.17%", label: "HIGH / VERY HIGH",},

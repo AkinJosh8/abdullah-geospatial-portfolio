@@ -1,7 +1,40 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { loadProjectDocument, loadProjectMap } from "../data/projectAssets";
 
 function ProjectCard({ project }) {
+  const [mapSrc, setMapSrc] = useState(project.map ?? "");
+  const [documentUrl, setDocumentUrl] = useState(project.document ?? "");
+
+  useEffect(() => {
+    let isMounted = true;
+
+    if (project.map) {
+      setMapSrc(project.map);
+    } else {
+      loadProjectMap(project).then((source) => {
+        if (isMounted) {
+          setMapSrc(source ?? "");
+        }
+      });
+    }
+
+    if (project.document) {
+      setDocumentUrl(project.document);
+    } else {
+      loadProjectDocument(project).then((source) => {
+        if (isMounted) {
+          setDocumentUrl(source ?? "");
+        }
+      });
+    }
+
+    return () => {
+      isMounted = false;
+    };
+  }, [project]);
+
   return (
     <motion.article
       className="project-card"
@@ -24,7 +57,7 @@ function ProjectCard({ project }) {
       </div>
 
       <div className="project-map">
-        <img src={project.map} alt={`${project.title} project visual`}/>
+        {mapSrc ? <img src={mapSrc} alt={`${project.title} project visual`} /> : null}
       </div>
 
       <div className="project-info project-info-bottom">
@@ -60,7 +93,7 @@ function ProjectCard({ project }) {
                 <span>&#10132;</span>
               </a>
             ) : null}
-            <a  href={project.document} className="project-download"  download>
+            <a href={documentUrl || "#"} className="project-download" download={Boolean(documentUrl)}>
               <span>Download Document</span>
               <span>&#10132;</span>
             </a>
