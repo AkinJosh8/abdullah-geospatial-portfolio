@@ -62,7 +62,7 @@ function ProjectDetails() {
               <span>{project.location}</span>
             </div>
             <div className="project-details-abstract-block">
-              <p className="project-details-kicker">  01 / ABSTRACT </p>
+              <p className="project-details-kicker">  ABSTRACT </p>
               <p className="project-details-abstract"> {project.abstract} </p>
             </div>
           </div>
@@ -76,7 +76,7 @@ function ProjectDetails() {
         <div className="container">
           <div className="project-details-section">
             <p className="project-details-kicker">
-              02 / TOOLS & SOFTWARE
+               TOOLS & SOFTWARE
             </p>
 
             <div className="project-details-tools">
@@ -90,7 +90,7 @@ function ProjectDetails() {
 
           <div className="project-details-section">
             <p className="project-details-kicker">
-              03 / TASKS
+               TASKS
             </p>
 
             <div className="project-task-list">
@@ -107,7 +107,7 @@ function ProjectDetails() {
 
           <div className="project-details-section">
             <p className="project-details-kicker">
-              04 / RESULTS & CONCLUSIONS
+               RESULTS & CONCLUSIONS
             </p>
 
             <div className="project-result-list">

@@ -61,14 +61,7 @@ function ProjectCard({ project }) {
       </div>
 
       <div className="project-info project-info-bottom">
-        <div className="project-highlights">
-          {project.highlights.map((highlight) => (
-            <div className="project-highlight"  key={highlight.label} >
-              <strong>{highlight.value}</strong>
-              <span>{highlight.label}</span>
-            </div>
-          ))}
-        </div>
+        
 
         <div className="project-bottom">
           <div className="project-tools">

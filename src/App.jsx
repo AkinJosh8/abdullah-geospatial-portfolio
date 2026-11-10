@@ -7,7 +7,6 @@ import { setPageSeo } from "./utils/seo";
 
 const HomePage = lazy(() => import("./pages/HomePage"));
 const ProjectDetails = lazy(() => import("./pages/ProjectDetails"));
-const Projects = lazy(() => import("./pages/Projects"));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -25,8 +24,6 @@ function App() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    const isProjectDetail = pathname.startsWith("/projects/") && pathname.split("/").filter(Boolean).length > 1;
-
     if (pathname === "/") {
       setPageSeo({
         title: "Abdullah Azeez | Geospatial Analyst Portfolio",
@@ -47,22 +44,6 @@ function App() {
         }
       });
     }
-
-    if (pathname === "/projects" && !isProjectDetail) {
-      setPageSeo({
-        title: "Project Archive | Abdullah Azeez",
-        description: "Browse the project archive of geospatial studies covering land-use change, urban planning, accessibility, flood risk, and climate analytics.",
-        canonicalPath: "/projects",
-        image: "/favicon.jpg",
-        jsonLd: {
-          "@context": "https://schema.org",
-          "@type": "CollectionPage",
-          name: "Project Archive",
-          description: "Archive of geospatial and environmental projects by Abdullah Azeez.",
-          url: `${window.location.origin}/projects`
-        }
-      });
-    }
   }, [pathname]);
 
   return (
@@ -77,7 +58,6 @@ function App() {
       <Suspense fallback={null}>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:slug" element={<ProjectDetails />} />
         </Routes>
       </Suspense>

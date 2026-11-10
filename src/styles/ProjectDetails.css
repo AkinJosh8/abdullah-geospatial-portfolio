@@ -1,5 +1,5 @@
 .project-details {
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 .project-details .container {
   width: min( 100% - (var(--page-padding) * 2), 1100px );
@@ -70,12 +70,13 @@
   letter-spacing: 0.1em;
 }
 .project-details-abstract {
-  max-width: 850px;
+  width: 100%;
   color: var(--color-text);
   font-family: var(--font-display);
   font-size: clamp(1.35rem, 2.6vw, 2.1rem);
   line-height: 1.35;
   letter-spacing: -0.025em;
+  
 }
 .project-details-visual {
   position: relative;

@@ -55,7 +55,7 @@
   gap: 0.55rem;
   color: var(--color-text);
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   line-height: 1;
@@ -83,11 +83,11 @@
 .menu-trigger {
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 0.6rem;
   padding: 0.45rem 0.6rem;
   color: var(--color-text);
   font-family: var(--font-mono);
-  font-size: 0.62rem;
+  font-size: 0.72rem;
   letter-spacing: 0.12em;
   cursor: pointer;
   line-height: 1;
@@ -99,21 +99,14 @@
   transform: translateY(-1px);
 }
 
-.menu-trigger span:last-child {
-  display: grid;
-  place-items: center;
-  width: 22px;
-  height: 22px;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-  transition:
-    transform var(--transition-base),
-    background-color var(--transition-base),
-    color var(--transition-base);
+.menu-trigger svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  transition: transform var(--transition-base), background-color var(--transition-base), color var(--transition-base);
 }
 
-.menu-trigger:hover span:last-child {
+.menu-trigger:hover svg {
   transform: rotate(90deg);
-  color: var(--color-bg);
-  background: var(--color-primary);
+  color: var(--color-primary);
 }

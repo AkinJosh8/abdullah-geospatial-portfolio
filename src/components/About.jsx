@@ -7,7 +7,7 @@ function About() {
         <div className="about-grid">
           <div className="about-intro">
             <div className="about-intro-copy">
-              <p className="about-label"> 04 / ABOUT </p>
+              <p className="about-label"> ABOUT </p>
               <h2 className="about-title">
                 <span className="about-title-line">SPATIAL THINKING.</span> <br />
                 <span className="about-title-line about-title-line--tight">PLANNING WITH DATA</span>
@@ -23,22 +23,16 @@ function About() {
             </div>
           </div>
           <div className="about-copy">
-            <p> I am an Urban and Regional Planner specialising in
-              geospatial science, Earth observation, and spatial data
-              analysis, with research experience spanning land-cover
-              change, urban growth, flood and coastal risk, drought,
-              and accessibility. 
+            <p> I am an Urban and Regional Planner specializing in geospatial science, Earth observation, and
+              spatial data analysis, with research experience across land-cover change, urban growth, flood and
+              coastal risk, drought, and accessibility. 
             </p>
-            <p> I use GIS, Google Earth Engine, and Python to analyse
-              Sentinel-2, Landsat, and MODIS datasets, applying methods
-              such as Random Forest and Extra Trees classification,
-              CA–Markov modelling, 2SFCA, and AHP/MCDA.
+            <p> I use GIS, Google Earth Engine, and Python to analyze Sentinel-2, Landsat, and MODIS datasets, 
+              applying methods such as Random Forest and Extra Trees classification, CA–Markov modelling, 2SFCA, 
+              and AHP/MCDA, passionate about using spatial evidence and environmental data to understand climate and 
+              urban risks, assess vulnerability, and support sustainable and resilient planning.
             </p>
-            <p> Through my studies, I have developed a strong interest
-              in using spatial evidence and environmental data to
-              understand climate and urban risks, assess vulnerability,
-              and support sustainable and resilient planning.
-            </p>
+            
           </div>
           <div className="about-capabilities">
             <p className="about-capabilities-label"> TECHNICAL FOCUS</p>

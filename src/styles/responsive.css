@@ -5,7 +5,7 @@
   )
 }
 .section {
-  padding-block: clamp(4rem, 8vw, 8rem);
+  padding-block: clamp(3rem, 6vw, 5.5rem);
 }
 
 @media (max-width: 900px) {
@@ -21,7 +21,7 @@
 
 @media (max-width: 768px) {
   .section {
-    padding-block: 4rem;
+    padding-block: 3rem;
   }
   .site-header {
     background: color-mix(in srgb, var(--color-bg) 94%, transparent);
@@ -32,10 +32,10 @@
     padding: 0.65rem 0.8rem;
   }
   .brand-text {
-    font-size: 0.65rem;
+    font-size: 0.72rem;
   }
   .menu-trigger {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
   }
   .hero {
     padding-top: 0;
@@ -93,67 +93,4 @@
     bottom: 3%;
     font-size: 0.42rem;
   }
-  .regional-map {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-  .regional-map-layout {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  .regional-map-title {
-    font-size: clamp(2.2rem, 10vw, 3.5rem);
-  }
-  .regional-map-status {
-    margin-top: 1.5rem;
-  }
-  .regional-map-visual {
-    min-height: 520px;
-  }
-  .regional-map-content {
-    top: 8%;
-    left: 7%;
-    width: 86%;
-    transform: none;
-  }
-  .map-label {
-    font-size: 0.42rem;
-  }
-  .map-mali {
-    top: 48%;
-    left: 25%;
-  }
-  .map-niger {
-    top: 51%;
-    left: 45%;
-  }
-  .map-chad {
-    top: 56%;
-    left: 67%;
-  }
-  .map-cameroon {
-    top: 70%;
-    left: 70%;
-  }
-  .map-nigeria {
-    top: 65%;
-    left: 53%;
-  }
-  .map-coordinate {
-    right: 1rem;
-    bottom: 1rem;
-    font-size: 0.42rem;
-  }
-  .map-country-highlight {
-    top: 67%;
-    left: 52%;
-  }
-  }
-  @keyframes scanMap {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(520px);
-    }
-  }
+}

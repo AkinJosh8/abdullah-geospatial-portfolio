@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Plus } from "lucide-react";
 
 function Header({ onMenuOpen }) {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -20,8 +21,8 @@ function Header({ onMenuOpen }) {
                 </a>
                 <button type="button" className="menu-trigger" onClick={onMenuOpen}
                     aria-label="Open navigation menu">
-                    <span>01 / MENU</span>
-                    <span>+</span>
+                    <span>MENU</span>
+                    <Plus size={14} strokeWidth={2.2} aria-hidden="true" />
                 </button>
             </div>
         </header>

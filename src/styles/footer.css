@@ -33,6 +33,17 @@
 
 .footer-meta--simple {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.footer-owner,
+.footer-tagline {
+  display: inline-block;
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -54,5 +65,10 @@
   .footer-meta {
     font-size: 0.62rem;
     line-height: 1.6;
+  }
+
+  .footer-meta--simple {
+    flex-direction: column;
+    gap: 0.35rem;
   }
 }
