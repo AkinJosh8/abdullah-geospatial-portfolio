@@ -10,9 +10,7 @@ function ProjectCard({ project }) {
   useEffect(() => {
     let isMounted = true;
 
-    if (project.map) {
-      setMapSrc(project.map);
-    } else {
+    if (!project.map) {
       loadProjectMap(project).then((source) => {
         if (isMounted) {
           setMapSrc(source ?? "");
@@ -20,9 +18,7 @@ function ProjectCard({ project }) {
       });
     }
 
-    if (project.document) {
-      setDocumentUrl(project.document);
-    } else {
+    if (!project.document) {
       loadProjectDocument(project).then((source) => {
         if (isMounted) {
           setDocumentUrl(source ?? "");

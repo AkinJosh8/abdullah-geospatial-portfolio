@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import projects from "../data/projects";
 import ProjectCard from "./ProjectCard";
 
@@ -11,11 +9,6 @@ function ProjectsSection() {
           <div>
             <p className="section-eyebrow"> MY WORK </p>
           </div>
-          <p className="section-intro">
-            Selection of geospatial projects combining spatial
-            analysis, remote sensing, and data-driven
-            approaches to investigate real-world problems.
-          </p>
         </div>
         <div className="projects-grid">
           {projects.map((project) => (

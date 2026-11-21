@@ -15,11 +15,17 @@
 .experience-type {
   color: var(--color-primary);
   font-family: var(--font-mono);
-  font-size: clamp(0.6rem, 0.78vw, 0.78rem);
   letter-spacing: 0.1em;
 }
 .experience-label {
-  margin-bottom: 0.7rem;
+  font-size: 1.32rem;
+  margin: 0 0 0 0.5rem;
+  letter-spacing: 0.1em;
+}
+.experience-type {
+  font-size: clamp(0.6rem, 0.78vw, 0.78rem);
+  font-size: 0.66rem;
+  letter-spacing: 0.09em;
 }
 .experience-intro {
   max-width: 580px;
@@ -150,15 +156,14 @@
   }
   .experience-heading,
   .experience-list {
-    width: min(calc(100% - (var(--page-padding) * 2)), 1180px);
+    width: calc(100% - 1rem);
     margin-inline: auto;
   }
   .experience-heading {
-    margin-bottom: 1.2rem;
+    margin: 0 auto 1.2rem;
   }
-  .experience-label,
   .experience-type {
-    font-size: 0.66rem;
+    font-size: 0.92rem;
     letter-spacing: 0.09em;
   }
   .experience-intro {
