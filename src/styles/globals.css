@@ -143,8 +143,8 @@ body.menu-open {
   transform: translate(3px, -3px);
 }
 .side-menu-footer {
-  margin-top: auto;
-  padding-top: 2rem;
+  margin-top: clamp(2rem, 6vh, 3.5rem);
+  padding-top: 1rem;
 }
 
 /* for theme styling */
@@ -180,9 +180,14 @@ body.menu-open {
   display: flex;
   align-items: center;
   gap: 0.65rem;
+  color: var(--color-text);
   font-family: var(--font-mono);
   font-size: 0.65rem;
   letter-spacing: 0.04em;
+  transition: color var(--transition-fast);
+}
+.theme-option:hover {
+  color: var(--color-primary);
 }
 .theme-indicator {
   color: var(--color-primary);
